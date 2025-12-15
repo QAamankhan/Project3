@@ -1,6 +1,7 @@
 package TestCases;
 
 import java.io.File;
+import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -12,7 +13,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 
+import utilities.ExcelReader;
 import utilities.ReadConfig;
 
 public class BaseTest {
@@ -82,5 +85,13 @@ public class BaseTest {
 		}
 		
 	}
+	
+	@DataProvider(name = "ExcelData")
+	public Object[][] data() throws Exception {
+
+	    ExcelReader exr = new ExcelReader();
+	    return exr.Data();   // 🔥 MUST return
+	}
+
 	
 }

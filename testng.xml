@@ -7,7 +7,7 @@
 
   <test thread-count="5" name="Test">
     <classes>
-      <class name="TestCases.HomePageValidation"/>
+      <class name="TestCases.SignInValidation"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

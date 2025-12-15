@@ -2,34 +2,40 @@
 <testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-15T20:23:29 IST" name="Suite" finished-at="2025-12-15T20:23:43 IST" duration-ms="13722">
+  <suite started-at="2025-12-15T21:49:04 IST" name="Suite" finished-at="2025-12-15T21:49:30 IST" duration-ms="25896">
     <groups>
     </groups>
-    <test started-at="2025-12-15T20:23:29 IST" name="Test" finished-at="2025-12-15T20:23:43 IST" duration-ms="13722">
-      <class name="TestCases.HomePageValidation">
-        <test-method is-config="true" signature="OpenBrowser()[pri:0, instance:TestCases.HomePageValidation@4116aac9]" started-at="2025-12-15T20:23:30 IST" name="OpenBrowser" finished-at="2025-12-15T20:23:39 IST" duration-ms="9185" status="PASS">
+    <test started-at="2025-12-15T21:49:04 IST" name="Test" finished-at="2025-12-15T21:49:30 IST" duration-ms="25896">
+      <class name="TestCases.SignInValidation">
+        <test-method is-config="true" signature="OpenBrowser()[pri:0, instance:TestCases.SignInValidation@7a8c8dcf]" started-at="2025-12-15T21:49:04 IST" name="OpenBrowser" finished-at="2025-12-15T21:49:13 IST" duration-ms="8730" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenBrowser -->
-        <test-method signature="TC01_SignIn()[pri:0, instance:TestCases.HomePageValidation@4116aac9]" started-at="2025-12-15T20:23:39 IST" name="TC01_SignIn" finished-at="2025-12-15T20:23:42 IST" duration-ms="2635" status="PASS">
+        <test-method signature="TC01_SignIn()[pri:0, instance:TestCases.SignInValidation@7a8c8dcf]" started-at="2025-12-15T21:49:13 IST" name="TC01_SignIn" finished-at="2025-12-15T21:49:16 IST" duration-ms="2989" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC01_SignIn -->
-        <test-method signature="TC02_CheckUserNavigateSignInPage()[pri:0, instance:TestCases.HomePageValidation@4116aac9]" started-at="2025-12-15T20:23:42 IST" name="TC02_CheckUserNavigateSignInPage" finished-at="2025-12-15T20:23:42 IST" duration-ms="131" status="FAIL">
+        <test-method signature="TC02_FillCreds(java.lang.String,java.lang.String)[pri:0, instance:TestCases.SignInValidation@7a8c8dcf]" started-at="2025-12-15T21:49:18 IST" name="TC02_FillCreds" data-provider="ExcelData" finished-at="2025-12-15T21:49:28 IST" duration-ms="10126" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[88aamankhan@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Amna@071125]]>
+              </value>
+            </param>
+          </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [false] but found [true]]]>
+              <![CDATA[Login failed. Actual text: Hello, Aman]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
+              <![CDATA[java.lang.AssertionError: Login failed. Actual text: Hello, Aman
 at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:1079)
-at org.testng.Assert.assertEquals(Assert.java:1043)
-at org.testng.Assert.assertEquals(Assert.java:1089)
-at TestCases.HomePageValidation.TC02_CheckUserNavigateSignInPage(HomePageValidation.java:20)
+at TestCases.SignInValidation.TC02_FillCreds(SignInValidation.java:31)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -61,12 +67,12 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC02_CheckUserNavigateSignInPage -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:TestCases.HomePageValidation@4116aac9]" started-at="2025-12-15T20:23:43 IST" name="TearDown" finished-at="2025-12-15T20:23:43 IST" duration-ms="402" status="PASS">
+        </test-method> <!-- TC02_FillCreds -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:TestCases.SignInValidation@7a8c8dcf]" started-at="2025-12-15T21:49:29 IST" name="TearDown" finished-at="2025-12-15T21:49:30 IST" duration-ms="448" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-      </class> <!-- TestCases.HomePageValidation -->
+      </class> <!-- TestCases.SignInValidation -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

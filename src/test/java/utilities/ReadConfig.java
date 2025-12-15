@@ -34,4 +34,12 @@ public class ReadConfig {
 		return ps.getProperty(key);
 	}
 	
+	public String GetEmail() {
+		return ps.getProperty("email");
+	}
+	
+	public String GetPassword() {
+		return ps.getProperty("password");
+	}
+	
 }
