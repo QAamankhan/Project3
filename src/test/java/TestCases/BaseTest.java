@@ -1,18 +1,20 @@
 package TestCases;
 
 import java.io.File;
-import java.io.IOException;
-
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 
 import utilities.ExcelReader;
@@ -23,7 +25,7 @@ public class BaseTest {
 	static WebDriver driver;
 	ReadConfig rc;
 
-	@BeforeClass
+	@BeforeSuite(alwaysRun = true)
 	public void OpenBrowser() {
 		rc = new ReadConfig();
 		String browser = rc.GetBrowser();
@@ -31,19 +33,21 @@ public class BaseTest {
 
 		switch (browser.toLowerCase()) {
 		case "chrome":
-			driver = new ChromeDriver();
-			driver.get(url);
+			ChromeOptions options= new ChromeOptions();
+			options.addArguments("--incognito");
+			driver = new ChromeDriver(options);
+			driver.navigate().to(url);
 			break;
 
 		case "firefox":
 			driver = new FirefoxDriver();
-			driver.get(url);
+			driver.navigate().to(url);
 
 			break;
 
 		case "Edge":
 			driver = new EdgeDriver();
-			driver.get(url);
+			driver.navigate().to(url);
 
 			break;
 
@@ -52,14 +56,27 @@ public class BaseTest {
 
 		}
 
-		driver.manage().window().maximize();
+		try {
+			driver.manage().window().maximize();
+			
+			WebElement continuebtn=driver.findElement(By.xpath("//button[.='Continue shopping']"));
+			if (continuebtn.isDisplayed()) {
+				continuebtn.click();
+				
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
 	}
+	
+	
 
 	
-	@AfterClass
-	public void TearDown() {
-		driver.close();
-	}
+//	@AfterClass(alwaysRun = true)
+//	public void TearDown() {
+//		driver.close();
+//	}
 	
 	
 	public static void ScreenShots(String testname,String status) {
@@ -90,7 +107,7 @@ public class BaseTest {
 	public Object[][] data() throws Exception {
 
 	    ExcelReader exr = new ExcelReader();
-	    return exr.Data();   // 🔥 MUST return
+	    return exr.Data();
 	}
 
 	

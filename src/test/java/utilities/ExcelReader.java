@@ -32,11 +32,7 @@ public class ExcelReader {
 				Cell cell= row.getCell(j);				
 				if (cell.getStringCellValue().isEmpty()) {
 					data[i-1][j]="";
-				}
-				else if (cell == null) {
-                    data[i - 1][j] = "";	
-				}
-				else {
+				} else {
 					data[i-1][j]=cell.getStringCellValue();
 				}
 
