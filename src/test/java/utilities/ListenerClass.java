@@ -62,7 +62,6 @@ public class ListenerClass implements ITestListener{
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		BaseTest.ScreenShots(result.getMethod().getMethodName(),"pass");
-//		System.out.println("PASS : "+result.getName());
 		test = reports.createTest(result.getName());
 		test.log(Status.PASS, MarkupHelper.createLabel("Pass : Test Case Name " + result.getName(),ExtentColor.GREEN));
 		

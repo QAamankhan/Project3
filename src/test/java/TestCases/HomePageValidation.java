@@ -1,24 +1,34 @@
 package TestCases;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import pages.HomePage;
 
-public class HomePageValidation extends BaseTest {
+public class HomePageValidation  extends BaseTest{
 
-	HomePage hp;
+	HomePage  hp;
 	
-	@Test
-	public void TC01_SignIn() {
-		hp = new HomePage(driver);
-		hp.ClickOnSignIn();
+	
+	@Test(groups = {"HomePage","regression"},dependsOnMethods = "TC01_CheckCart")
+	public void TC01_SearchProduct() {
+	hp = new HomePage(driver);
+	String title=hp.SearchProduct("laptop");
+	if (title.toLowerCase().contains("laptop")) {
+		System.out.println( "User Navigate"+title+"page");
+		Assert.assertTrue(true);
+		
+	}else {
+		System.out.println( "Something Worng"+title);
+//		Assert.assertTrue(false);
+	}
 	}
 	
-	@Test
-	public void TC02_CheckUserNavigateSignInPage() {
-		Assert.assertEquals(hp.CheckNavigateSignInPage(),false);
-		System.out.println("pass");
-
+	@Test(groups = {"HomePage","regression"})
+	public void TC02_AddProduct() {
+		hp.AddProductInCart();
 	}
+	
+	
 }

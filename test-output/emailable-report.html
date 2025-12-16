@@ -9,14 +9,41 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">13,722</td><td></td><td></td></tr>
+<tr><td><a href="#t0">test</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">32,076</td><td>regression</td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">TestCases.HomePageValidation</td><td><a href="#m0">TC02_CheckUserNavigateSignInPage</a></td><td rowspan="1">1765810422701</td><td rowspan="1">131</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">TestCases.HomePageValidation</td><td><a href="#m1">TC01_SignIn</a></td><td rowspan="1">1765810419866</td><td rowspan="1">2635</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">TestCases.CartPageValidation</td><td><a href="#m0">TC01_CheckCart</a></td><td rowspan="1">1765884571260</td><td rowspan="1">3776</td></tr><tr class="failedodd"><td rowspan="1">TestCases.HomePageValidation</td><td><a href="#m1">TC02_AddProduct</a></td><td rowspan="1">1765884570899</td><td rowspan="1">49</td></tr><tr><th colspan="4">test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">TestCases.CartPageValidation</td><td><a href="#m2">TC02_ValidateCartPageTitle</a></td><td rowspan="1">1765884575214</td><td rowspan="1">1797</td></tr><tr class="passedeven"><td><a href="#m3">TC03_IteamCount</a></td><td rowspan="1">1765884577286</td><td rowspan="1">48</td></tr><tr class="passedodd"><td rowspan="1">TestCases.HomePageValidation</td><td><a href="#m4">TC01_SearchProduct</a></td><td rowspan="1">1765884577549</td><td rowspan="1">6102</td></tr><tr class="passedeven"><td rowspan="2">TestCases.SignInValidation</td><td><a href="#m5">TC01_SignIn</a></td><td rowspan="1">1765884553524</td><td rowspan="1">5522</td></tr><tr class="passedeven"><td><a href="#m6">TC02_FillCreds</a></td><td rowspan="1">1765884560712</td><td rowspan="1">9826</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">TestCases.HomePageValidation#TC02_CheckUserNavigateSignInPage</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [false] but found [true]
-	at TestCases.HomePageValidation.TC02_CheckUserNavigateSignInPage(HomePageValidation.java:20)
+<h2>test</h2><h3 id="m0">TestCases.CartPageValidation#TC01_CheckCart</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=143.0.7499.42)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4f1fc8cae6bddfa67b3c1d9327e5aaf8, clickElement {id=f.FC15095EFE77C38D390AE344D8A53E1D.d.F85B9889DB7B02AD6A6D39650C5608DA.e.275}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.42, chrome: {chromedriverVersion: 143.0.7499.42 (24bdc8c48a0c..., userDataDir: C:\Users\HP\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56901}, goog:processID: 1808, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56901/devtoo..., se:cdpVersion: 143.0.7499.42, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (4f1fc8cae6bddfa67b3c1d9327e5aaf8)] -&gt; xpath: //button[@data-a-selector=&apos;decrement&apos;]]
+Session ID: 4f1fc8cae6bddfa67b3c1d9327e5aaf8
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pages.CartPage.CheckCartEmpty(CartPage.java:50)
+	at TestCases.CartPageValidation.TC01_CheckCart(CartPageValidation.java:17)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">TestCases.HomePageValidation#TC01_SignIn</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">TestCases.HomePageValidation#TC02_AddProduct</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;pages.HomePage.AddProductInCart()&quot; because &quot;this.hp&quot; is null
+	at TestCases.HomePageValidation.TC02_AddProduct(HomePageValidation.java:30)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">TestCases.CartPageValidation#TC02_ValidateCartPageTitle</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">TestCases.CartPageValidation#TC03_IteamCount</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">TestCases.HomePageValidation#TC01_SearchProduct</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">TestCases.SignInValidation#TC01_SignIn</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">TestCases.SignInValidation#TC02_FillCreds</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>88aamankhan@gmail.com</td><td>Amna@071125</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

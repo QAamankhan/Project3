@@ -4,15 +4,25 @@
   <listeners>
     <listener class-name="utilities.ListenerClass"/>
   </listeners>
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" name="test(failed)">
+    <groups>
+      <run>
+        <include name="regression"/>
+      </run>
+    </groups>
     <classes>
       <class name="TestCases.HomePageValidation">
         <methods>
-          <include name="TearDown"/>
           <include name="OpenBrowser"/>
-          <include name="TC02_CheckUserNavigateSignInPage"/>
+          <include name="TC02_AddProduct"/>
         </methods>
       </class> <!-- TestCases.HomePageValidation -->
+      <class name="TestCases.CartPageValidation">
+        <methods>
+          <include name="OpenBrowser"/>
+          <include name="TC01_CheckCart"/>
+        </methods>
+      </class> <!-- TestCases.CartPageValidation -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

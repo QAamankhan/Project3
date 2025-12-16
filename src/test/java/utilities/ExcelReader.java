@@ -11,9 +11,6 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 
 public class ExcelReader {
-	
-	
-	
 	public Object[][] Data() throws Exception, IOException {
 		
 		String path="D:\\Practice_Excel.xlsx\\";
@@ -35,13 +32,14 @@ public class ExcelReader {
 				Cell cell= row.getCell(j);				
 				if (cell.getStringCellValue().isEmpty()) {
 					data[i-1][j]="";
-				}
-				else {
+				} else {
 					data[i-1][j]=cell.getStringCellValue();
 				}
 
 			}
 		}
+		ws.close();
+        fis.close();
 		return data;
 		
 		
